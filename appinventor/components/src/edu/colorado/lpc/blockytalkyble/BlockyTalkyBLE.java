@@ -16,6 +16,8 @@ import com.google.appinventor.components.annotations.SimpleEvent;
 import com.google.appinventor.components.annotations.SimpleFunction;
 import com.google.appinventor.components.annotations.SimpleObject;
 import com.google.appinventor.components.annotations.SimpleProperty;
+import com.google.appinventor.components.annotations.UsesPermissions;
+
 import com.google.appinventor.components.common.ComponentCategory;
 
 import com.google.appinventor.components.runtime.ComponentContainer;
@@ -37,6 +39,8 @@ import java.util.Iterator;
 import java.util.*;
 
 @DesignerComponent(version = 1, description = "", category = ComponentCategory.EXTENSION, nonVisible = true, iconName = "images/bluetooth.png")
+@UsesPermissions(permissionNames = "android.permission.BLUETOOTH, " + "android.permission.BLUETOOTH_ADMIN,"
+      + "android.permission.ACCESS_COARSE_LOCATION")
 
 @SimpleObject(external = true)
 public class BlockyTalkyBLE extends AndroidNonvisibleComponent {
